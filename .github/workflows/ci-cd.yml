@@ -104,24 +104,25 @@ jobs:
       - name: Create zip archive
         run: cd dist && zip -r ../cicdpipeline-${{ steps.extract_version.outputs.version }}.zip .
 
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.extract_version.outputs.version }}
-          release_name: Release v${{ steps.extract_version.outputs.version }}
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
+      # GitHub Release creation steps commented out due to permission issues
+      # - name: Create GitHub Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: v${{ steps.extract_version.outputs.version }}
+      #     release_name: Release v${{ steps.extract_version.outputs.version }}
+      #     body_path: CHANGELOG.md
+      #     draft: false
+      #     prerelease: false
 
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./cicdpipeline-${{ steps.extract_version.outputs.version }}.zip
-          asset_name: cicdpipeline-${{ steps.extract_version.outputs.version }}.zip
-          asset_content_type: application/zip
+      # - name: Upload Release Asset
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./cicdpipeline-${{ steps.extract_version.outputs.version }}.zip
+      #     asset_name: cicdpipeline-${{ steps.extract_version.outputs.version }}.zip
+      #     asset_content_type: application/zip
