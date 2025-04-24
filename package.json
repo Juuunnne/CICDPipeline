@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
-    "lint": "eslint .",
+    "lint": "eslint . --config eslint.config.js",
     "build": "node -e \"const fs = require('fs'); const path = require('path'); !fs.existsSync('dist') && fs.mkdirSync('dist'); ['index.js', 'package.json', '.env', 'README.md', 'CHANGELOG.md'].forEach(file => fs.copyFileSync(file, path.join('dist', file)));\"",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
