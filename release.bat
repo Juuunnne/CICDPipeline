@@ -23,7 +23,7 @@ echo Version %VERSION% created.
 
 :: Push changes and tags
 echo Pushing changes and tags...
-git push --follow-tags origin main
+git push --follow-tags origin master
 
 echo Release %VERSION% completed successfully!
 echo Changelog has been updated.
