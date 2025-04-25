@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/Juuunnne/CICDPipeline/compare/v1.0.2...v1.0.3) (2025-04-25)
+
+
+### Bug Fixes
+
+* change branch name ([1a6ac34](https://github.com/Juuunnne/CICDPipeline/commit/1a6ac349239cd3ff2d4dd60835438fdea516658a))
+
+
+### Documentation
+
+* report note ([c2ba2c3](https://github.com/Juuunnne/CICDPipeline/commit/c2ba2c374decdcb609df3d577aafb1c91cb8a659))
+
 ### [1.0.2](https://github.com/Juuunnne/CICDPipeline/compare/v1.0.1...v1.0.2) (2025-04-25)
 
 ### 1.0.1 (2025-04-25)
