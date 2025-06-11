@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Juuunnne/CI_Pipeline/compare/v1.0.5...v1.1.0) (2025-06-11)
+
+
+### Features
+
+* **ci:** automate release process (T1-T5) ([a682c0e](https://github.com/Juuunnne/CI_Pipeline/commit/a682c0e7a540e9972b488512f61eb51b876f3cdc))
+
 ### [1.0.5](https://github.com/Juuunnne/CICDPipeline/compare/v1.0.4...v1.0.5) (2025-06-11)
 
 ### [1.0.4](https://github.com/Juuunnne/CICDPipeline/compare/v1.0.3...v1.0.4) (2025-04-25)
