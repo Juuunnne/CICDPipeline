@@ -87,13 +87,6 @@ jobs:
         run: |
           npm run release
 
-      - name: Push changes and tags
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          tags: true
-
       - name: Extract version from package.json
         id: extract_version
         run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
