@@ -63,7 +63,11 @@ jobs:
 
   release:
     needs: [test, build]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'chore(release):')
+    if: |
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/master' &&
+      !contains(github.event.head_commit.message, 'chore(release)') &&
+      (startsWith(github.event.head_commit.message, 'feat') || startsWith(github.event.head_commit.message, 'fix'))
     runs-on: ubuntu-latest
 
     steps:
